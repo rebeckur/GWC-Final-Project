@@ -30,7 +30,7 @@ document.getElementById("date").innerHTML = d.toDateString();
 
     <div class="nav">
       <ul>
-			<li class="Monday"><a href="Monday.html">Monday</a></li><hr width="75%"> 
+		<li class="Monday"><a href="Monday.html">Monday</a></li><hr width="75%"> 
 		<li class="Tuesday"><a href="Tuesday.html">Tuesday</a></li><hr width="75%"> 
 		<li class="Wednesday"><a href="Wed.html"><h3>Wednesday</h3></a></li><hr width="75%"> 
 		<div class="container">
