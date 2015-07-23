@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Poiret+One|Indie+Flower' rel='stylesheet' type='text/css'>
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script src="script1.js"></script>
+
+<title></title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+
+<link href="FinalProjectStyle3.css" rel="stylesheet" type="text/css">
+
+<body>
+<div data-role="page" id="page">
+<div data-role="header">
+<h1 id="date"style="font-size:300%"></h1>
+<script>
+var d = new Date();
+document.getElementById("date").innerHTML = d.toDateString();
+</script>
+</div>
+<header>
+
+    <div class="nav">
+		<ul>
+			<li class="Monday"><a href="Monday.html">Monday</a></li><hr width="75%"> 
+			<li class="Tuesday"><a href="Tuesday.html">Tuesday</a></li><hr width="75%"> 
+			<li class="Wednesday"><a href="Wed.html">Wednesday</a></li><hr width="75%"> 
+			<li class="Thursday"><a href="Thursday.html">Thursday</a></li><hr width="75%"> 
+			<li class="Friday"><a href="Friday.html"><h3>Friday</h3></a></li><hr width="75%"> 
+			<div class="container">
+
+	<div class="listItems"></div>
+	<div data-role="footer" class="ui-bar ui-footer"  data-position="fixed">
+				<form class="addToListForm">
+					<input type="text" name="listItemInput" class="listItemInput" />
+				   <center> <label for="listItemInput"><input type="submit" class="addToList" value="Add to List" /></label></center>
+				</form>
+			</div>
+		</ul>
+	</div>
+  </header> 
+
+</body>
+</html>
