@@ -17,7 +17,7 @@
 
 <link href="FinalProjectStyle3.css" rel="stylesheet" type="text/css">
 
-<body>
+<body background = "light_texture2320.jpg">
 <div data-role="page" id="page">
 <div data-role="header">
 <h1 id="date"style="font-size:300%"></h1>
