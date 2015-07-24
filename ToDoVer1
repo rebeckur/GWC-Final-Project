@@ -40,7 +40,7 @@ document.getElementById("date").innerHTML = d.toDateString();
       </ul>
     </div>
   </header> 
- <center><img style="HEIGHT:200px;" src="FreshPaint-6-2015.png"></center>
+ <center><img style="HEIGHT:200px;" src="Drawing (2).png"></center>
 
 </body>
 </html>
