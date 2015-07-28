@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, initial-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-    <link href='http://fonts.googleapis.com/css?family=Poiret+One|Indie+Flower' rel='stylesheet' type='text/css'>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-    
-    <title>Final Project by rebeckur</title>
-  </head>
+<head>
+<title></title>
+<link href='http://fonts.googleapis.com/css?family=Poiret+One|Indie+Flower' rel='stylesheet' type='text/css'>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+<link href="FinalProjectStyle3.css" rel="stylesheet" type="text/css">
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script src="functions.js"></script>
+<script src="toDo.js"></script>
+</head>
 
 <body>
 <div data-role="page" id="Home">
@@ -32,19 +34,19 @@ document.getElementById("date").innerHTML = d.toDateString();
 
     <div class="nav">
       <ul>
-        <li><a href="#Home" onclick="menuFunction('Home')">Home</a></li><hr 75%>
-		<li class="Monday"><a href="#Monday" onclick="menuFunction('Monday')">Monday</a></li><hr 75%>
-        <li class="Tuesday"><a href="#Tuesday" onclick="menuFunction('Tuesday')">Tuesday</a></li> <hr 75%>
-        <li class="Wednesday"><a href="#Wednesday" onclick="menuFunction('Wednesday')">Wednesday</a></li> <hr 75%>
-        <li class="Thursday"><a href="#Thursday" onclick="menuFunction('Thursday')">Thursday</a></li><hr 75%>
-        <li class="Friday"><a href="#Friday" onclick="menuFunction('Friday')">Friday</a></li><hr 75%>
+        <li><a href="#Home" onclick="menuFunction('Home')">Home</a></li>
+		<li class="Monday"><a href="#Monday" onclick="menuFunction('Monday')">Monday</a></li>
+        <li class="Tuesday"><a href="#Tuesday" onclick="menuFunction('Tuesday')">Tuesday</a></li>
+        <li class="Wednesday"><a href="#Wednesday" onclick="menuFunction('Wednesday')">Wednesday</a></li>
+        <li class="Thursday"><a href="#Thursday" onclick="menuFunction('Thursday')">Thursday</a></li>
+        <li class="Friday"><a href="#Friday" onclick="menuFunction('Friday')">Friday</a></li>
         
       </ul>
     </div>
   </header> 
 
 
- <center><img style="HEIGHT:200px;" src="FreshPaint-6-2015.png"></center>
+ <center><!--<img style="HEIGHT:200px;" src="FreshPaint-6-2015.png">--></center>
 </div>  
 	<br><br>
 	
@@ -60,11 +62,7 @@ document.getElementById("date").innerHTML = d.toDateString();
 			<div data-role="footer" class="ui-bar ui-footer" data-position="fixed">
 				<form class="addToListForm">
 					<input type="text" id="monItemInput" name="listItemInput" class="listItemInput" value="" />
-					<center> 
-					  <label for="monItemInput"><input id="addMonday" type="submit"  class="addToList" value="Add to List" /></label>
-					  
-					  <!-- onclick="mondayList()" -->
-					</center>
+					<center> <label for="monItemInput"><input id="addMonday" type="submit" class="addToList" value="Add to List" onclick="mondayList()"/></label></center>
 				</form>
 			</div>
 		  </div>
@@ -88,7 +86,7 @@ document.getElementById("date").innerHTML = d.toDateString();
 	 <ul>		
 		<li class="Monday"><a href="#Monday"  onclick="menuFunction('Monday')">Monday</a></li><hr width="75%"> 
 		
-		<li class="Tuesday"><a href="#Tuesday">Tuesday</a></li><hr width="75%"> 
+		<li class="Tuesday"><a href="#Tuesday"><h3>Tuesday</h3></a></li><hr width="75%"> 
 			<div class="container">
 			<div class="tueslistItems"></div>
 			<div data-role="footer" class="ui-bar ui-footer" data-position="fixed">
@@ -120,7 +118,7 @@ document.getElementById("date").innerHTML = d.toDateString();
 		
 		<li class="Tuesday"><a href="#Tuesday" onclick="menuFunction('Tuesday')">Tuesday</a></li><hr width="75%"> 
 
-		<li class="Wednesday"><a href="#Wednesday" onclick="menuFunction('Wednesday')">Wednesday</a></li><hr width="75%"> 
+		<li class="Wednesday"><a href="#Wednesday" onclick="menuFunction('Wednesday')"><h3>Wednesday</h3></a></li><hr width="75%"> 
 		  <div class="container">
 			<div class="wedlistItems"></div>
 			<div data-role="footer" class="ui-bar ui-footer" data-position="fixed">
@@ -151,7 +149,7 @@ document.getElementById("date").innerHTML = d.toDateString();
 		<li class="Tuesday"><a href="#Tuesday" onclick="menuFunction('Tuesday')">Tuesday</a></li><hr width="75%"> 
 
 		<li class="Wednesday"><a href="#Wednesday" onclick="menuFunction('Wednesday')">Wednesday</a></li><hr width="75%"> 
-		<li class="Thursday"><a href="#Thursday" onclick="menuFunction('Thursday')">Thursday</a></li><hr width="75%"> 
+		<li class="Thursday"><a href="#Thursday" onclick="menuFunction('Thursday')"><h3>Thursday</h3></a></li><hr width="75%"> 
 		  <div class="container">
 			<div class="thurslistItems"></div>
 			<div data-role="footer" class="ui-bar ui-footer" data-position="fixed">
@@ -183,7 +181,7 @@ document.getElementById("date").innerHTML = d.toDateString();
 
 		<li class="Wednesday"><a href="#Wednesday" onclick="menuFunction('Wednesday')">Wednesday</a></li><hr width="75%"> 
 		<li class="Thursday"><a href="#Thursday" onclick="menuFunction('Thursday')">Thursday</a></li><hr width="75%"> 
-		<li class="Friday"><a href="#Friday" onclick="menuFunction('Friday')">Friday</a></li>
+		<li class="Friday"><a href="#Friday" onclick="menuFunction('Friday')"><h3>Friday</h3></a></li>
  		  <div class="container">
 			<div class="frilistItems"></div>
 			<div data-role="footer" class="ui-bar ui-footer" data-position="fixed">
@@ -198,6 +196,6 @@ document.getElementById("date").innerHTML = d.toDateString();
     </div>
   </header>
  </div>
- 
+
 </body>
 </html>
