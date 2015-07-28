@@ -8,15 +8,14 @@
 
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 
-<link href="FinalProjectStyle3.css" rel="stylesheet" type="text/css">
+<link href="stylesheet.css" rel="stylesheet" type="text/css">
 
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 <script src="functions.js"></script>
-<script src="toDo.js"></script>
+<script src="main.js"></script>
 </head>
 
 <body>
