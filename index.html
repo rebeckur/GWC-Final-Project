@@ -8,14 +8,138 @@
 
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 
-<link href="stylesheet.css" rel="stylesheet" type="text/css">
-
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
-<script src="functions.js"></script>
-<script src="input.js"></script>
+<style>
+	input[type="text"] {
+	    background: #CCCCFF;
+	    border: 1px solid white;
+	    height: 40px;
+	    width: 100%;
+	    padding: 5px 3%;
+	    line-height: 30px;
+	    font-size: 25px;
+	    border-radius: 5px;
+	    margin-bottom: 20px;
+	
+	}
+	
+	input[type="text"]:focus {
+	    outline: 0;
+	    border: 1px solid white;    
+	}
+	
+	.addToList {
+	    
+	    margin: 0 auto 20px auto;
+	    height: 36px;
+	    width: 160px;
+	    font-family: Indie Flower;
+	    font-size: 20px;
+	    color: #1f3133;
+	    border-radius: 3px;
+	    background: #e5e5e5; /* Old browsers */
+	    background: -moz-linear-gradient(top, #e5e5e5 0%, #efefef 20%, #f5f5f5 40%, #fafafa 50%, #efefef 51%, #efefef 83%, #dfdfdf 100%); /* FF3.6+ */
+	    background: -o-linear-gradient(top, #e5e5e5 0%,#efefef 20%,#f5f5f5 40%,#fafafa 50%,#efefef 51%,#efefef 83%,#dfdfdf 100%); /* Opera 11.10+ */
+	    background: -ms-linear-gradient(top, #e5e5e5 0%,#efefef 20%,#f5f5f5 40%,#fafafa 50%,#efefef 51%,#efefef 83%,#dfdfdf 100%); /* IE10+ */
+	    background: linear-gradient(to bottom, #e5e5e5 0%,#efefef 20%,#f5f5f5 40%,#fafafa 50%,#efefef 51%,#efefef 83%,#dfdfdf 100%); /* W3C */
+	    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#dfdfdf',GradientType=0 ); /* IE6-9 */
+	}
+	
+	.input {
+	    background: #CCCCFF;
+	    margin-bottom: 5px;
+	    padding: 3px 10px;
+	    border: 1px solid white;
+	    border-radius: 2px;
+	}
+	
+	h1{
+		color:#660066;
+	    font-family: 'Indie Flower', cursive;
+	    font-size:600%;
+		text-align: center;
+		text-decoration: none;
+	}
+	h2 {
+		color: #A37ACC ;
+		font-family:"Courier New";
+		font-size:270%;
+		text-decoration: underline;
+		}
+	p  {
+		font-family: 'Poiret One', cursive;
+		text-align: center;
+		font-size: 180%;
+		}
+	h3 {
+		font-family: "courier new";
+		font-size:140%}
+	ul{
+		font-family:"courier new";
+		font-size:130%;
+		}
+		body {
+		  margin: 0;
+		  padding: 0;
+	  
+	}
+	 
+	.nav ul {
+	  list-style: none;
+	  background-color: white;
+	  text-align: center;
+	  padding: 40px;
+	  margin: 0;
+	}
+	.nav li {
+	  font-family: 'Indie Flower', cursive;
+	  font-size:75%;
+	  line-height: 30px;
+	  height: 30px;
+	  border-bottom: 1px solid #888;
+	}
+	 
+	.nav a {
+	  text-decoration: none;
+	  color: brown;
+	  display: block;
+	  transition: .3s background-color;
+	}
+	 
+	.nav a:hover {
+	  background-color: lavender;
+	}
+	 
+	.nav a.active {
+	  color: #444;
+	  cursor: default;
+	}
+	 
+	@media screen and (min-width: 600px) {
+	  .nav li {
+	    width: 50px;
+	    border-bottom: none;
+	    height: 0px;
+	    line-height: 20px;
+	    font-size: 1.2em;
+	  }
+	 
+	  .nav li {
+	    display: inline-block;
+		width: 200px;
+		height: 40px;
+		margin-top: 15px;
+	    margin-right: -4px;
+	  }
+	}
+	
+	.listItems{
+		text-align:left;
+	}
+</style>
 </head>
 
 <body>
@@ -28,6 +152,208 @@ document.getElementById("date").innerHTML = d.toDateString();
 </script>
 </div>
 
+<script>
+	console.log("test if monday is empty "+jQuery.isEmptyObject(monday));
+	if (typeof monday == "undefined" || !(monday instanceof Array)) {
+			var monday = [];
+			console.log("initialized monday");
+	}
+	
+	console.log("test if tuesday is empty "+jQuery.isEmptyObject(tuesday));
+	if (typeof tuesday == "undefined" || !(tuesday instanceof Array)) {
+			var tuesday = [];
+			console.log("initialized tuesday");
+	}
+	
+	console.log("test if wednesday is empty "+jQuery.isEmptyObject(wednesday));
+	if (typeof wednesday == "undefined" || !(wednesday instanceof Array)) {
+			var wednesday = [];
+			console.log("initialized wednesday");
+	}
+	
+	console.log("test if thursday is empty "+jQuery.isEmptyObject(thursday));
+	if (typeof thursday == "undefined" || !(thursday instanceof Array)) {
+			var thursday = [];
+			console.log("initialized thursday");
+	}
+	
+	console.log("test if friday is empty "+jQuery.isEmptyObject(friday));
+	if (typeof friday == "undefined" || !(friday instanceof Array)) {
+			var friday = [];
+			console.log("initialized friday");
+	}
+	
+	
+	function menuFunction(theDiv) {
+				document.getElementById('Home').style.display = 'none';
+				document.getElementById('Monday').style.display = 'none';
+				document.getElementById('Tuesday').style.display = 'none';
+				document.getElementById('Wednesday').style.display = 'none';
+				document.getElementById('Thursday').style.display = 'none';
+				document.getElementById('Friday').style.display = 'none';
+				document.getElementById(theDiv).style.display = 'block';
+	}
+	
+	function mondayList(){
+		monday.push(document.getElementById('monItemInput').value);
+		console.log("Monday is  "+monday);
+	}
+	
+	function tuesdayList(){
+		tuesday.push(document.getElementById('tuesItemInput').value);
+		console.log("Tuesday is  "+tuesday);
+	}
+	function wednesdayList(){
+		wednesday.push(document.getElementById('wedItemInput').value);
+		console.log("Wednesday is  "+wednesday);
+	}
+	function thursdayList(){
+		thursday.push(document.getElementById('thursItemInput').value);
+		console.log("Thursday is  "+thursday);
+	}
+	function fridayList(){
+		friday.push(document.getElementById('friItemInput').value);
+		console.log("Friday is  "+friday);
+	}
+	
+	
+	
+	
+	function printMonday(){
+		console.log("length of monday is  "+monday.length);
+		if (monday.length!=0){
+			for(var i=0;i<monday.length;i++){
+			document.getElementById("monItemInput").innerHTML = monday[i];
+			}
+		}
+	}
+	
+	function printTuesday(){
+		console.log("length of tuesday is  "+tuesday.length);
+		if (tuesday.length!=0){
+			for(var i=0;i<tuesday.length;i++){
+			document.getElementById("tuesItemInput").innerHTML = tuesday[i];
+			}
+		}
+	}
+	
+	function printWednesday(){
+		console.log("length of wednesday is  "+wednesday.length);
+		if (wednesday.length!=0){
+			for(var i=0;i<wednesday.length;i++){
+			document.getElementById("wedItemInput").innerHTML = wednesday[i];
+			}
+		}
+	}
+	
+	
+	function printThursday(){
+		console.log("length of thursday is  "+thursday.length);
+		if (thursday.length!=0){
+			for(var i=0;i<thursday.length;i++){
+			document.getElementById("thursItemInput").innerHTML = thursday[i];
+			}
+		}
+	}
+	
+	
+	function printFriday(){
+		console.log("length of friday is  "+friday.length);
+		if (friday.length!=0){
+			for(var i=0;i<friday.length;i++){
+			document.getElementById("friItemInput").innerHTML = friday[i];
+			}
+		}
+	}
+	
+	$(document).ready(function() {
+	
+	var d = new Date();
+	document.getElementById("date").innerHTML = d.toDateString();
+	
+    $('.listItemInput').focus();
+
+    $(document)
+    // Add to  monday list
+    .on('click', '#addMonday', function() {
+        var itemToAdd = $('input[id="monItemInput"]').val().trim();
+        if ( itemToAdd ) {
+            $('.monlistItems').append('<div class="input"><input type="checkbox" name="item" class="item" value="' + itemToAdd + '" /> '+ itemToAdd +'</div>');
+        }
+        $('#monItemInput').val('').focus();
+		
+    })
+	
+    $(document)
+    // Add to  tuesday list
+    .on('click', '#addTuesday', function() {
+        var itemToAdd = $('input[id="tuesItemInput"]').val().trim();
+        if ( itemToAdd ) {
+            $('.tueslistItems').append('<div class="input"><input type="checkbox" name="item" class="item" value="' + itemToAdd + '" /> '+ itemToAdd +'</div>');
+        }
+        $('#tuesItemInput').val('').focus();
+		
+    })	
+
+    $(document)
+    // Add to  wednesday list
+    .on('click', '#addWednesday', function() {
+        var itemToAdd = $('input[id="wedItemInput"]').val().trim();
+        if ( itemToAdd ) {
+            $('.wedlistItems').append('<div class="input"><input type="checkbox" name="item" class="item" value="' + itemToAdd + '" /> '+ itemToAdd +'</div>');
+        }
+        $('#wedItemInput').val('').focus();
+		
+    })	
+	
+    $(document)
+    // Add to  thursday list
+    .on('click', '#addThursday', function() {
+        var itemToAdd = $('input[id="thursItemInput"]').val().trim();
+        if ( itemToAdd ) {
+            $('.thurslistItems').append('<div class="input"><input type="checkbox" name="item" class="item" value="' + itemToAdd + '" /> '+ itemToAdd +'</div>');
+        }
+        $('#thursItemInput').val('').focus();
+		
+    })
+	
+    $(document)
+    // Add to  friday list
+    .on('click', '#addFriday', function() {
+        var itemToAdd = $('input[id="friItemInput"]').val().trim();
+        if ( itemToAdd ) {
+            $('.frilistItems').append('<div class="input"><input type="checkbox" name="item" class="item" value="' + itemToAdd + '" /> '+ itemToAdd +'</div>');
+        }
+        $('#friItemInput').val('').focus();
+		
+    })
+	
+	
+    // Add to list
+    .on('click', '.addToList', function() {
+        var itemToAdd = $('input[name="listItemInput"]').val().trim();
+        if ( itemToAdd ) {
+            $('.listItems').append('<div class="input"><input type="checkbox" name="item" class="item" value="' + itemToAdd + '" /> '+ itemToAdd +'</div>');
+        }
+        $('.listItemInput').val('').focus();
+		
+    })
+    
+    // Remove from list
+    .on('change', '.item', function() {
+        if( $(this).is(':checked') ){
+            var parentElem = $(this).parent();
+                parentElem.remove();
+        }
+    });
+    
+    $('.addToListForm').submit( function(e) {
+        e.preventDefault();
+        return false;
+    }); 
+});
+
+</script>
 
 <header>
 
