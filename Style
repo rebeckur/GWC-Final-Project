@@ -1,5 +1,5 @@
 input[type="text"] {
-    background: white;
+    background: lavender;
     border: 1px solid white;
     height: 40px;
     width: 100%;
@@ -17,7 +17,6 @@ input[type="text"]:focus {
 }
 
 .addToList {
-    
     margin: 0 auto 20px auto;
     height: 36px;
     width: 160px;
@@ -76,7 +75,6 @@ ul{
  
 .nav ul {
   list-style: none;
-  background-color: white;
   text-align: center;
   padding: 40px;
   margin: 0;
@@ -123,6 +121,12 @@ ul{
   }
 }
 
-.listItems{
+.monlistItems,.tueslistItems,.wedlistItems,.thurslistItems,.frilistItems{
 	text-align:left;
+}
+body {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
